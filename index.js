@@ -9,8 +9,10 @@ let message = ""
 
 let messageEL = document.getElementById("message-el")
 let sumEL = document.querySelector("#sum-el")    //need to be more specific (CSS selector so need to be careful if it's an ID or class) (we'll see this later it's an exmemple)
+let cardsEL =document.getElementById("cards-el")
 
 function startGame() {
+    cardsEL.textContent += firstCard + " " + secondCard
     sumEL.textContent += sum
 if (sum <= 20) {
     message = "Do you want to draw a new card?"
