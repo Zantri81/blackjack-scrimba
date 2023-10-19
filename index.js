@@ -25,3 +25,10 @@ if (sum <= 20) {
     }
     messageEL.textContent = message
 }
+
+function newCard() {
+    console.log("Drawing a new card from the deck!")
+    let drawCard = 4
+    sum += drawCard
+    startGame()
+}
