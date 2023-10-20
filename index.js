@@ -1,5 +1,5 @@
-let firstCard = 6
-let secondCard = 11
+let firstCard = getRandomCard()
+let secondCard = getRandomCard()
 let cards = [firstCard, secondCard]      //array is an ordered list of items
 let sum = firstCard + secondCard
 
@@ -12,6 +12,10 @@ let messageEL = document.getElementById("message-el")
 let sumEL = document.querySelector("#sum-el")    //need to be more specific (CSS selector so need to be careful if it's an ID or class) (we'll see this later it's an exmemple)
 let cardsEL =document.getElementById("cards-el")
 
+function getRandomCard() {      // fonction became 5 with return
+    let randomCard = Math.floor( Math.random() * 13 ) + 1       //math floor delete decimal         math random is between 0.000 etc and 0.999 etc
+    return randomCard
+}
 
 function startGame() {
     renderGame()
@@ -38,8 +42,7 @@ if (sum <= 20) {
 }
 
 function newCard() {
-    console.log("Drawing a new card from the deck!")
-    let drawCard = 4
+    let drawCard = getRandomCard()
     sum += drawCard
     cards.push(drawCard)
     renderGame()
