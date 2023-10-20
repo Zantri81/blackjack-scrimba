@@ -12,10 +12,15 @@ let messageEL = document.getElementById("message-el")
 let sumEL = document.querySelector("#sum-el")    //need to be more specific (CSS selector so need to be careful if it's an ID or class) (we'll see this later it's an exmemple)
 let cardsEL =document.getElementById("cards-el")
 
-function getRandomCard() {      // fonction became 5 with return
+function getRandomCard() {  // fonction became 5 with return
     let randomCard = Math.floor( Math.random() * 13 ) + 1       //math floor delete decimal         math random is between 0.000 etc and 0.999 etc
-    return randomCard
-}
+    if ( randomCard > 10) { 
+        return 10
+    } else if ( randomCard === 1) { 
+        return 11
+    } else {
+        return randomCard
+}}
 
 function startGame() {
     renderGame()
