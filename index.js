@@ -50,9 +50,9 @@ if (sum <= 20) {
 }
 
 function newCard() {
-    
+    if ( isAlive === true && hasBlackJack === false) {           // && is and || is or
     let drawCard = getRandomCard()
     sum += drawCard
     cards.push(drawCard)
     renderGame()
-}
+}}
