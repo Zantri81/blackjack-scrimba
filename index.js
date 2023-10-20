@@ -1,10 +1,8 @@
-let firstCard = getRandomCard()
-let secondCard = getRandomCard()
-let cards = [firstCard, secondCard]      //array is an ordered list of items
-let sum = firstCard + secondCard
+let cards = []      //array is an ordered list of items
+let sum = 0
 
 let hasBlackJack = false
-let isAlive = true
+let isAlive = false
 
 let message = ""
 
@@ -23,6 +21,11 @@ function getRandomCard() {  // fonction became 5 with return
 }}
 
 function startGame() {
+    isAlive = true
+    let firstCard = getRandomCard()
+    let secondCard = getRandomCard()
+    cards = [firstCard, secondCard]
+    sum = firstCard + secondCard
     renderGame()
 }
 
@@ -47,6 +50,7 @@ if (sum <= 20) {
 }
 
 function newCard() {
+    
     let drawCard = getRandomCard()
     sum += drawCard
     cards.push(drawCard)
