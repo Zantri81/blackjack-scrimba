@@ -10,6 +10,16 @@ let messageEL = document.getElementById("message-el")
 let sumEL = document.querySelector("#sum-el")    //need to be more specific (CSS selector so need to be careful if it's an ID or class) (we'll see this later it's an exmemple)
 let cardsEL =document.getElementById("cards-el")
 
+let player = {              // it's an object no need to "let" in the bracet
+    Name: "Billy",
+    Chips: 200
+}
+
+
+
+let playerEL = document.getElementById("player-el")
+playerEL.textContent = player.name + ": €" + player.chips  // when in an objet we do this
+
 function getRandomCard() {  // fonction became 5 with return
     let randomCard = Math.floor( Math.random() * 13 ) + 1       //math floor delete decimal         math random is between 0.000 etc and 0.999 etc
     if ( randomCard > 10) { 
